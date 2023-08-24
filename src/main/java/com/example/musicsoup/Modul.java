@@ -13,11 +13,11 @@ public class Modul {
     public void poluchenieDannyh(String url) throws IOException {
 
         Document doc = Jsoup.connect(url+songName).get();
-        Elements newsHeadlines = doc.select(".song-item a");
-        if(newsHeadlines.isEmpty()) {
+        Elements headlines = doc.select(".song-item a");
+        if(headlines.isEmpty()) {
             songName="Ничего не найдено!";
         }else{
-        for (Element r : newsHeadlines) {
+        for (Element r : headlines) {
             String songTitle=r.getElementsByClass("title").text();
             String artist=r.getElementsByClass("artist").text();
             result=songTitle+" - "+artist+"\n";
