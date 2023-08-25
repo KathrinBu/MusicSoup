@@ -2,16 +2,22 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.musicsoup.HelloController">
    <children>
-      <Button fx:id="button" layoutX="40.0" layoutY="109.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="GO!" />
-      <TextArea fx:id="textArea" layoutX="345.0" layoutY="109.0" prefHeight="200.0" prefWidth="200.0" />
-      <TextField fx:id="textField" layoutX="47.0" layoutY="68.0" prefHeight="25.0" prefWidth="261.0" />
-      <Label layoutX="55.0" layoutY="47.0" text="SONG:" />
+      <Button fx:id="button" layoutX="266.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="GO!" />
+      <TextArea fx:id="textArea" layoutX="15.0" layoutY="73.0" prefHeight="305.0" prefWidth="157.0" />
+      <TextField fx:id="textField" layoutX="68.0" layoutY="14.0" prefHeight="25.0" prefWidth="188.0" />
+      <Label layoutX="26.0" layoutY="18.0" text="SONG:" />
+      <TableView fx:id="tableView" layoutX="184.0" layoutY="73.0" prefHeight="299.0" prefWidth="390.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="saveToPdf" layoutX="429.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="save to PDF" />
    </children>
 </AnchorPane>
